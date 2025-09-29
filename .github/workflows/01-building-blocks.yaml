@@ -8,7 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:      
       - name: Say hello
-        run: echo "Hello World"
+        run: |
+          echo "Hello World"
+          exit 0
   echo-goodbye:
     runs-on: ubuntu-latest
     steps:
