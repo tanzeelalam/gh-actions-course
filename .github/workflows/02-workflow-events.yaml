@@ -2,6 +2,8 @@ name: 02 - Workflow Events
 
 on:
   - push
+  - workflow_dispatch
+  - create
 
 jobs:
   echo:
