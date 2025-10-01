@@ -7,7 +7,7 @@ on:
 
 jobs:
     echo:
-        runs-on: ubuntu_latest
+        runs-on: ubuntu-latest
         steps:
             - name: Echo the message on PR close
               run: echo "Running whenever a PR is closed"
