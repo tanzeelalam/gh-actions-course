@@ -9,10 +9,10 @@ jobs:
         steps:
             - name: Checkout Code
               uses: actions/checkout@v2
-              with:
-                repository: tanzeelalam/skyhighsamplerepo
-                ref: master
-                path: checkouttest
+            #   with:
+            #     repository: tanzeelalam/skyhighsamplerepo
+            #     ref: master
+            #     path: checkouttest
             # - name: Printing Folders
             #   run: | 
             #     echo "Current working directory is ${pwd}"
