@@ -8,8 +8,9 @@ on:
 
 jobs:
     echo:
-        name: Print message on screen
-        runs-on: ubuntu_latest
-        run: echo "Running wnenever a PR is opened or synchronized AND base branch is main"
+        steps:
+            - name: Print message on screen
+              runs-on: ubuntu_latest
+              run: echo "Running wnenever a PR is opened or synchronized AND base branch is main"
 
 
