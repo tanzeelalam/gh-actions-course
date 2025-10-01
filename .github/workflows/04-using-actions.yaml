@@ -13,10 +13,10 @@ jobs:
             #     repository: tanzeelalam/skyhighsamplerepo
             #     ref: master
             #     path: checkouttest
-            # - name: Printing Folders
-            #   run: | 
-            #     echo "Current working directory is ${pwd}"
-            #     ls -R
+            - name: Printing Folders
+              run: | 
+                echo "Current working directory is ${pwd}"
+                ls -R
             - name: Setup Node
               uses: actions/setup-node@v3
               with: 
@@ -31,5 +31,6 @@ jobs:
                 npm run test
 
                 
+
 
             
