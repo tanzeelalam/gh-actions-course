@@ -1,0 +1,21 @@
+name: 04 - Using Actions
+
+on:
+    push:
+
+jobs:
+    build:
+        runs-on: ubuntu
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v2
+              with:
+                repository: tanzeelalam/skyhighsamplerepo
+                ref: master
+                path: checkouttest
+            - name: Printing Folders
+              run: | 
+                echo "Current working directory is ${pwd}"
+                ls -R
+
+            
