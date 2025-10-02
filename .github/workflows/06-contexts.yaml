@@ -6,9 +6,7 @@ run-name: 06 - Context | DEBUG - ${{inputs.debug}} #"My custom workflow run name
 
 jobs:
     echo-data:
-        runs-on: ubuntu-latest
-        env: 
-            TEST: "Alam"
+        runs-on: ubuntu-latest        
         steps:
             - name: Display Information
               run: |
@@ -22,8 +20,7 @@ jobs:
 
             - name: Retrieve Variable
               run: |
-               echo "Value of $TEST"
-               echo $TEST
+               echo "Value of ${{vars.MY_VAR}}"               
 
 
                     
