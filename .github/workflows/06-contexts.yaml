@@ -5,6 +5,8 @@ on: [push, workflow_dispatch]
 jobs:
     echo-data:
         runs-on: ubuntu-latest
+        env: 
+            TEST: "Alam"
         steps:
             - name: Display Information
               run: |
@@ -23,5 +25,6 @@ jobs:
 
 
                     
+
 
 
