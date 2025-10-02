@@ -18,9 +18,10 @@ jobs:
 
             - name: Retrieve Variable
               run: |
-               echo "Value of $MY_VAR"
-               echo $MY_VAR
+               echo "Value of $TEST"
+               echo $TEST
 
 
                     
+
 
