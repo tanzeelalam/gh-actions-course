@@ -7,7 +7,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Display Information
-                run: |
+              run: |
                     echo "Event name: ${{github.event_name}}"
                     echo "Ref: ${{github.ref}}"
                     echo "SHA: ${{github.sha}}"
@@ -17,6 +17,6 @@ jobs:
                     echo "Run number: ${{github.run_number}}"
 
             - name: Retrieve Variable
-                run: echo "Value of $MY_VAR"
+              run: echo "Value of $MY_VAR"
 
                     
