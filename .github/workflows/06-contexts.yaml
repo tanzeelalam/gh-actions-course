@@ -11,8 +11,8 @@ on:
 run-name: 06 - Context | DEBUG - ${{inputs.debug}} #"My custom workflow run name - ${{ runner.os }}"
 
 env:
-    MY_WORKFLOW_VAR: "job"
-    MY_OVERWRITTEN_VAR: "job"
+    MY_WORKFLOW_VAR: "Workflow"
+    MY_OVERWRITTEN_VAR: "Workflow"
 
 jobs:
     echo-data:
@@ -41,7 +41,13 @@ jobs:
               run: |
                echo "Workflow env: ${{ env.MY_WORKFLOW_VAR}}"
                echo "Workflow env: ${{ env.MY_OVERWRITTEN_VAR}}"
-
+    echo-data2:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print Env Variables
+              run: |
+               echo "Workflow env: $MY_WORKFLOW_VAR"
+               echo "Workflow env: $MY_OVERWRITTEN_VAR"
 
                     
 
