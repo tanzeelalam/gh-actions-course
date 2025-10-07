@@ -5,16 +5,19 @@ on:
   workflow_dispatch:
 env: 
   WORKFLOW_VAR: "I am a WORKFLOW var"
+  OVERWRITTEN: "I am from WORKFLOW, NOT Overwritten yet"
 jobs:
   echo:
     runs-on: ubuntu-latest
     env:
       JOB_VAR: "I am a JOB var"
+      OVERWRITTEN: "Overwritten in JOB"
     steps:
       - name: Print Env variables
         env:
           STEP_VAR: "I am a STEP env var"
           step_var2: "I am another STEP env var"
+          OVERWRITTEN: "Overwritten in STEP"
         run: |
           echo "Step env var: ${{ env.STEP_VAR }}"
           echo "Step env var2 : $step_var2"
