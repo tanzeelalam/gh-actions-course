@@ -1,7 +1,6 @@
 name: 06 - Contexts
 
 on: 
-    push:
     workflow_dispatch:
         inputs:
             debug:
@@ -50,6 +49,7 @@ jobs:
                echo "Workflow env: $MY_OVERWRITTEN_VAR"
 
                     
+
 
 
 
