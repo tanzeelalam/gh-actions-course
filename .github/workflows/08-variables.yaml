@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 env: 
   WORKFLOW_VAR: "I am a WORKFLOW var"
-  OVERWRITTEN: "I am from WORKFLOW, NOT Overwritten yet"
+  OVERWRITTEN: "I am from WORKFLOW NOT Overwritten yet"
   #UNDEFINED_VAR_WITH_DEFAULT: ${{ vars.UNDEFINED_VAR || 'default_value' }}
 jobs:
   echo:
