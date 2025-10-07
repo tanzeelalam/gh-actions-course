@@ -25,5 +25,5 @@ jobs:
           echo "Job env var: ${{ env.JOB_VAR }}"
           echo "Workflow env var direct access: $WORKFLOW_VAR"
           echo "Workflow env var via github actions syntax: ${{ env.WORKFLOW_VAR }}"
-          echo OVERWRITTEN: ${{ env.OVERWRITTEN }}"
+          echo "OVERWRITTEN: ${{ env.OVERWRITTEN }}"
   
