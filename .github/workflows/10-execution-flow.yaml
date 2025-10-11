@@ -25,6 +25,7 @@ jobs:
     
     deploy-nonprod:
         runs-on: ubuntu-latest
+        needs: [lint-build, unit-tests]
         if: ${{ success() }}
         steps:
             - name: Deploying to nonprod
