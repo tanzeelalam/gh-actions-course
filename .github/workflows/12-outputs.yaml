@@ -22,6 +22,7 @@ jobs:
             - name: Build
               id: build
               run: |
+                echo "$GITHUB_OUTPUT"
                 echo "status=${{inputs.build-status}}" >> "$GITHUB_OUTPUT"
                 
     deploy:
