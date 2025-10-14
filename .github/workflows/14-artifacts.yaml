@@ -50,6 +50,7 @@ jobs:
                 path: 13-caching/react-app/build
     deploy:
         runs-on: ubuntu-latest
+        needs: test-build
         steps:
             #1. Download build files
             - name: Download build files              
