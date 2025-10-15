@@ -1,4 +1,4 @@
-nname: 15 - Working with matrices
+name: 15 - Working with matrices
 
 on:
   workflow_dispatch:
