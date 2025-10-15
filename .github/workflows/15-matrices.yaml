@@ -1,11 +1,11 @@
-name: 15 - Working with matrices
+nname: 15 - Working with matrices
 
 on:
   workflow_dispatch:
 
 jobs:
   backward-compatibility:
-    name: ${{ matrix.os }}-${{matrix.node}}
+    name: ${{ matrix.os }}-${{ matrix.node-version }}
     strategy:
       matrix:
         node-version: [18.x, 20.x, 21.x]
