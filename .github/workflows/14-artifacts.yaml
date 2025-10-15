@@ -3,6 +3,9 @@ name: 14 - Working with Artifacts
 on:
     workflow_dispatch
 
+env:
+    build-artifact-key: app-${{ github.sha }}
+    test-report-key: test-coverage-${{ github.sha }}
 jobs:
     test-build:
         runs-on: ubuntu-latest
@@ -36,7 +39,13 @@ jobs:
 
             #5. Unit tests
             - name: Unit tests
-              run: npm run test
+              run: npm run test -- --coverage
+
+            - name: Upload test results
+              uses: actions/upload-artifact@v4
+              with:
+                name: ${{ env.test-report-key }}
+                path: 13-caching/react-app/coverage
 
             #6. Build code
             - name: Build code
@@ -46,7 +55,7 @@ jobs:
             - name: Upload build files
               uses: actions/upload-artifact@v4
               with:
-                name: app
+                name: ${{ env.build-artifact-key }}
                 path: 13-caching/react-app/build
     deploy:
         runs-on: ubuntu-latest
